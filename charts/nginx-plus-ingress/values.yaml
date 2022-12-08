@@ -7,8 +7,8 @@ nginx-ingress:
       enable: true
     enableSnippets: true
     image:
-      repository: ghcr.io/<GITHUB_USER>/nginx-plus-ingress
-      tag: <TAG>
+      repository: private-registry.nginx.com/nginx-ic-nap-dos/nginx-plus-ingress
+      tag: 2.4.0
     nginxplus: true
     nginxStatus:
       allowCidrs: 0.0.0.0/0
@@ -16,6 +16,6 @@ nginx-ingress:
     readyStatus:
       initialDelaySeconds: 30
     serviceAccount:
-      imagePullSecretName: ghcr
+      imagePullSecretName: regcred
   prometheus:
     create: true
